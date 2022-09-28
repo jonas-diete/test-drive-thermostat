@@ -63,4 +63,14 @@ describe('Thermostat', () => {
     }
     expect(thermo.getTemperature()).toBe(10);
   })
+
+  it('resets temperature to 20 degrees', () => {
+    const thermo = new Thermostat();
+    thermo.up();
+    thermo.up();
+    thermo.up();
+    thermo.down();
+    thermo.reset();
+    expect(thermo.getTemperature()).toBe(20);
+  })
 })

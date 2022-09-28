@@ -28,6 +28,10 @@ class Thermostat {
       this.maxTemperature = 32;
     }
   };
+
+  reset() {
+    this.temperature = 20;
+  }
 };
 
 module.exports = Thermostat;
